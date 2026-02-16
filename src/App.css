@@ -219,6 +219,7 @@
   color: #5b4e4b;
 }
 
+
 .sidebar {
   display: grid;
   gap: 0.8rem;
@@ -320,6 +321,31 @@
   font-weight: 700;
 }
 
+.placement-box {
+  margin-top: 0.7rem;
+  border: 1px solid #eadfdd;
+  border-radius: 10px;
+  background: #fffaf9;
+  padding: 0.65rem;
+}
+
+.placement-box h4 {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #7f2f27;
+}
+
+.placement-box ul {
+  margin: 0.45rem 0 0;
+  padding-left: 1.05rem;
+}
+
+.placement-box li {
+  margin-top: 0.22rem;
+  color: #5b4e4b;
+  font-size: 0.82rem;
+}
+
 @media (max-width: 1080px) {
   .layout {
     grid-template-columns: 1fr;
@@ -354,4 +380,5 @@
   .food-detail img {
     height: 180px;
   }
+
 }

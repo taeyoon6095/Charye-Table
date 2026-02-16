@@ -8,6 +8,13 @@ const regions = [
     image: '/regions/seoul-gyeonggi.svg',
     summary: '균형 잡힌 구성과 깔끔한 전류가 특징입니다.',
     sample: ['소고기 산적', '동그랑땡', '맑은 탕'],
+    placements: [
+      '1열 중앙: 신위, 잔',
+      '2열 서측: 소고기 산적',
+      '2열 동측: 조기/생선구이',
+      '3열 중앙: 맑은 탕',
+      '5열 동측: 사과',
+    ],
   },
   {
     id: 'gangwon',
@@ -15,6 +22,13 @@ const regions = [
     image: '/regions/gangwon.svg',
     summary: '산나물과 어물을 함께 쓰는 담백한 상차림입니다.',
     sample: ['황태구이', '감자전', '곤드레나물'],
+    placements: [
+      '2열 동측: 황태구이',
+      '3열 중앙: 생선탕',
+      '4열 중앙: 곤드레나물',
+      '4열 서측: 북어포',
+      '5열 서측: 배',
+    ],
   },
   {
     id: 'chungcheong',
@@ -22,6 +36,13 @@ const regions = [
     image: '/regions/chungcheong.svg',
     summary: '순한 간과 정갈한 담음새를 중시합니다.',
     sample: ['두부전', '무나물', '쇠고기무국'],
+    placements: [
+      '2열 중앙: 두부전',
+      '3열 중앙: 쇠고기무국',
+      '4열 중앙: 무나물',
+      '4열 우측: 식혜',
+      '5열 동측: 사과',
+    ],
   },
   {
     id: 'jeolla',
@@ -29,6 +50,13 @@ const regions = [
     image: '/regions/jeolla.svg',
     summary: '가짓수가 풍성하고 맛의 대비가 선명합니다.',
     sample: ['홍어전', '표고전', '병어찜'],
+    placements: [
+      '2열 서측: 홍어전',
+      '2열 중앙: 표고전',
+      '2열 동측: 병어찜',
+      '4열 중앙: 고사리나물',
+      '5열 동측: 붉은 과실',
+    ],
   },
   {
     id: 'gyeongsang',
@@ -36,6 +64,13 @@ const regions = [
     image: '/regions/gyeongsang.svg',
     summary: '해산물 비중이 높은 실용적 구성입니다.',
     sample: ['문어숙회', '가자미구이', '탕국'],
+    placements: [
+      '2열 동측: 가자미구이',
+      '2열 중앙: 문어숙회',
+      '3열 중앙: 탕국',
+      '4열 우측: 식혜',
+      '5열 서측: 배',
+    ],
   },
   {
     id: 'jeju',
@@ -43,6 +78,13 @@ const regions = [
     image: '/regions/jeju.svg',
     summary: '옥돔과 해초 중심의 소박한 구성입니다.',
     sample: ['옥돔구이', '갈치조림', '톳무침'],
+    placements: [
+      '2열 동측: 옥돔구이',
+      '2열 중앙: 갈치조림',
+      '3열 중앙: 몸국',
+      '4열 중앙: 톳무침',
+      '5열 서측: 배',
+    ],
   },
 ]
 
@@ -60,22 +102,19 @@ const tableRows = [
       {
         id: 'rice-bowl',
         name: '메(밥)',
-        image:
-          'https://images.unsplash.com/photo-1516684732162-798a0062be99?auto=format&fit=crop&w=900&q=80',
+        image: '/foods/rice-bowl.svg',
         description: '밥은 보통 서쪽에 두고, 짝을 이루는 국은 동쪽에 둡니다. 좌반우갱 원칙의 기본입니다.',
       },
       {
         id: 'soup-bowl',
         name: '갱(국)',
-        image:
-          'https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=900&q=80',
+        image: '/foods/soup-bowl.svg',
         description: '맑은 탕이나 국을 함께 올립니다. 밥과 짝으로 배치해 제례의 기본 구성을 맞춥니다.',
       },
       {
         id: 'ritual-wine',
         name: '잔(술)',
-        image:
-          'https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=900&q=80',
+        image: '/foods/ritual-wine.svg',
         description: '맑은 술을 올려 예를 표합니다. 잔은 정중앙이 아닌 신위 앞에 단정하게 둡니다.',
       },
     ],
@@ -86,22 +125,19 @@ const tableRows = [
       {
         id: 'beef-jeok',
         name: '육적',
-        image:
-          'https://images.unsplash.com/photo-1529563021893-cc83c992d75d?auto=format&fit=crop&w=900&q=80',
+        image: '/foods/beef-jeok.svg',
         description: '육류 적은 서쪽에 둡니다. 어동육서 원칙을 따라 생선과 좌우 균형을 맞춥니다.',
       },
       {
         id: 'jeon',
         name: '전류',
-        image:
-          'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80',
+        image: '/foods/jeon.svg',
         description: '전은 종류별로 간격을 맞춰 담으면 상차림이 정돈되어 보입니다.',
       },
       {
         id: 'fish-jeok',
         name: '어적',
-        image:
-          'https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=900&q=80',
+        image: '/foods/fish-jeok.svg',
         description: '생선 요리는 동쪽에 둡니다. 머리와 꼬리 방향은 두동미서 원칙에 맞춰 정합니다.',
       },
     ],
@@ -112,22 +148,19 @@ const tableRows = [
       {
         id: 'beef-tang',
         name: '소고기탕',
-        image:
-          'https://images.unsplash.com/photo-1604908811371-44c6ab6fce7f?auto=format&fit=crop&w=900&q=80',
+        image: '/foods/beef-tang.svg',
         description: '육탕은 기름을 걷어 맑게 준비하고, 자극적인 향신료는 줄입니다.',
       },
       {
         id: 'fish-tang',
         name: '어탕',
-        image:
-          'https://images.unsplash.com/photo-1505253716362-afaea6ce52e6?auto=format&fit=crop&w=900&q=80',
+        image: '/foods/fish-tang.svg',
         description: '어탕은 비린내를 줄여 담백하게 준비하는 것이 일반적입니다.',
       },
       {
         id: 'tofu-tang',
         name: '두부탕',
-        image:
-          'https://images.unsplash.com/photo-1625937286074-9ca519d5d9df?auto=format&fit=crop&w=900&q=80',
+        image: '/foods/tofu-tang.svg',
         description: '두부탕은 간을 강하게 하지 않고 재료 맛을 살려 배치합니다.',
       },
     ],
@@ -138,22 +171,19 @@ const tableRows = [
       {
         id: 'po',
         name: '포',
-        image:
-          'https://images.unsplash.com/photo-1615937722923-67f6deaf2cc9?auto=format&fit=crop&w=900&q=80',
+        image: '/foods/po.svg',
         description: '포는 왼쪽에 두는 좌포우혜 원칙을 따릅니다.',
       },
       {
         id: 'namul',
         name: '나물',
-        image:
-          'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=80',
+        image: '/foods/namul.svg',
         description: '나물은 물기를 제거해 깔끔하게 담고, 서로 색이 겹치지 않게 둡니다.',
       },
       {
         id: 'sikhye',
         name: '식혜',
-        image:
-          'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=900&q=80',
+        image: '/foods/sikhye.svg',
         description: '식혜는 오른쪽에 배치하는 경우가 많으며 후식류와의 간격을 확보합니다.',
       },
     ],
@@ -164,36 +194,31 @@ const tableRows = [
       {
         id: 'jujube',
         name: '대추',
-        image:
-          'https://images.unsplash.com/photo-1607305387299-a3d9611cd469?auto=format&fit=crop&w=900&q=80',
+        image: '/foods/jujube.svg',
         description: '말린 대추는 전통적으로 자손 번영을 상징하는 과실로 자주 사용됩니다.',
       },
       {
         id: 'chestnut',
         name: '밤',
-        image:
-          'https://images.unsplash.com/photo-1603048719539-9ecb4a70e3f2?auto=format&fit=crop&w=900&q=80',
+        image: '/foods/chestnut.svg',
         description: '밤은 껍질 상태를 깔끔하게 맞춰 좌우 균형을 고려해 배치합니다.',
       },
       {
         id: 'pear',
         name: '배',
-        image:
-          'https://images.unsplash.com/photo-1574226516831-e1dff420e37f?auto=format&fit=crop&w=900&q=80',
+        image: '/foods/pear.svg',
         description: '배는 흰 계열 과실로 분류되어 서쪽에 두는 홍동백서 원칙을 따릅니다.',
       },
       {
         id: 'persimmon',
         name: '곶감',
-        image:
-          'https://images.unsplash.com/photo-1619566636858-adf3ef46400b?auto=format&fit=crop&w=900&q=80',
+        image: '/foods/persimmon.svg',
         description: '곶감은 건과류와 함께 묶어 정리하면 5열 구성이 단정해집니다.',
       },
       {
         id: 'apple',
         name: '사과',
-        image:
-          'https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?auto=format&fit=crop&w=900&q=80',
+        image: '/foods/apple.svg',
         description: '사과는 붉은 과실로 동쪽에 배치합니다. 크기가 비슷한 과실끼리 맞추면 보기 좋습니다.',
       },
     ],
@@ -313,6 +338,14 @@ function App() {
                   {selectedRegion.sample.map((food) => (
                     <span key={food}>{food}</span>
                   ))}
+                </div>
+                <div className="placement-box">
+                  <h4>위치별 음식</h4>
+                  <ul>
+                    {selectedRegion.placements.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             ) : null}

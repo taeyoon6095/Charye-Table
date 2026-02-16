@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff7f4"/>
+      <stop offset="100%" stop-color="#ffe2dc"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="520" rx="36" fill="url(#g)"/>
+  <circle cx="400" cy="240" r="132" fill="#ec2513" opacity="0.16"/>
+  <rect x="206" y="134" width="388" height="212" rx="24" fill="#ffffff" stroke="#f0c8c1" stroke-width="6"/>
+  <text x="400" y="250" text-anchor="middle" font-size="58" fill="#8c2b21" font-family="Arial, sans-serif" font-weight="700">JEON</text>
+  <text x="400" y="305" text-anchor="middle" font-size="28" fill="#b16359" font-family="Arial, sans-serif">Charye Table</text>
+</svg>
