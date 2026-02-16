@@ -47,71 +47,178 @@ const regions = [
 ]
 
 const principles = [
-  {
-    title: '홍동백서',
-    desc: '붉은 과실은 동쪽, 흰 과실은 서쪽에 둡니다.',
-  },
-  {
-    title: '어동육서',
-    desc: '생선은 동쪽, 고기는 서쪽에 둡니다.',
-  },
-  {
-    title: '두동미서',
-    desc: '생선 머리는 동쪽, 꼬리는 서쪽을 향하게 둡니다.',
-  },
-  {
-    title: '좌포우혜',
-    desc: '포는 왼쪽, 식혜는 오른쪽에 둡니다.',
-  },
+  { title: '홍동백서', desc: '붉은 과실은 동쪽, 흰 과실은 서쪽에 둡니다.' },
+  { title: '어동육서', desc: '생선은 동쪽, 고기는 서쪽에 둡니다.' },
+  { title: '두동미서', desc: '생선 머리는 동쪽, 꼬리는 서쪽을 향하게 둡니다.' },
+  { title: '좌포우혜', desc: '포는 왼쪽, 식혜는 오른쪽에 둡니다.' },
 ]
 
 const tableRows = [
   {
     label: '1열: 신위',
     items: [
-      { name: '메', hint: '밥은 서쪽, 국은 동쪽(좌반우갱) 원칙을 따릅니다.' },
-      { name: '신위', center: true },
-      { name: '잔', hint: '청주 또는 약주를 올립니다.' },
+      {
+        id: 'rice-bowl',
+        name: '메(밥)',
+        image:
+          'https://images.unsplash.com/photo-1516684732162-798a0062be99?auto=format&fit=crop&w=900&q=80',
+        description: '밥은 보통 서쪽에 두고, 짝을 이루는 국은 동쪽에 둡니다. 좌반우갱 원칙의 기본입니다.',
+      },
+      {
+        id: 'soup-bowl',
+        name: '갱(국)',
+        image:
+          'https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=900&q=80',
+        description: '맑은 탕이나 국을 함께 올립니다. 밥과 짝으로 배치해 제례의 기본 구성을 맞춥니다.',
+      },
+      {
+        id: 'ritual-wine',
+        name: '잔(술)',
+        image:
+          'https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=900&q=80',
+        description: '맑은 술을 올려 예를 표합니다. 잔은 정중앙이 아닌 신위 앞에 단정하게 둡니다.',
+      },
     ],
   },
   {
     label: '2열: 어육',
     items: [
-      { name: '육적' },
-      { name: '전류', hint: '고기/생선 방향을 맞춰 배치합니다.' },
-      { name: '어적' },
+      {
+        id: 'beef-jeok',
+        name: '육적',
+        image:
+          'https://images.unsplash.com/photo-1529563021893-cc83c992d75d?auto=format&fit=crop&w=900&q=80',
+        description: '육류 적은 서쪽에 둡니다. 어동육서 원칙을 따라 생선과 좌우 균형을 맞춥니다.',
+      },
+      {
+        id: 'jeon',
+        name: '전류',
+        image:
+          'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80',
+        description: '전은 종류별로 간격을 맞춰 담으면 상차림이 정돈되어 보입니다.',
+      },
+      {
+        id: 'fish-jeok',
+        name: '어적',
+        image:
+          'https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=900&q=80',
+        description: '생선 요리는 동쪽에 둡니다. 머리와 꼬리 방향은 두동미서 원칙에 맞춰 정합니다.',
+      },
     ],
   },
   {
     label: '3열: 탕',
-    items: [{ name: '탕' }, { name: '탕' }, { name: '탕' }],
+    items: [
+      {
+        id: 'beef-tang',
+        name: '소고기탕',
+        image:
+          'https://images.unsplash.com/photo-1604908811371-44c6ab6fce7f?auto=format&fit=crop&w=900&q=80',
+        description: '육탕은 기름을 걷어 맑게 준비하고, 자극적인 향신료는 줄입니다.',
+      },
+      {
+        id: 'fish-tang',
+        name: '어탕',
+        image:
+          'https://images.unsplash.com/photo-1505253716362-afaea6ce52e6?auto=format&fit=crop&w=900&q=80',
+        description: '어탕은 비린내를 줄여 담백하게 준비하는 것이 일반적입니다.',
+      },
+      {
+        id: 'tofu-tang',
+        name: '두부탕',
+        image:
+          'https://images.unsplash.com/photo-1625937286074-9ca519d5d9df?auto=format&fit=crop&w=900&q=80',
+        description: '두부탕은 간을 강하게 하지 않고 재료 맛을 살려 배치합니다.',
+      },
+    ],
   },
   {
     label: '4열: 포·나물',
     items: [
-      { name: '포', hint: '좌포우혜 원칙 적용' },
-      { name: '나물' },
-      { name: '식혜' },
+      {
+        id: 'po',
+        name: '포',
+        image:
+          'https://images.unsplash.com/photo-1615937722923-67f6deaf2cc9?auto=format&fit=crop&w=900&q=80',
+        description: '포는 왼쪽에 두는 좌포우혜 원칙을 따릅니다.',
+      },
+      {
+        id: 'namul',
+        name: '나물',
+        image:
+          'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=80',
+        description: '나물은 물기를 제거해 깔끔하게 담고, 서로 색이 겹치지 않게 둡니다.',
+      },
+      {
+        id: 'sikhye',
+        name: '식혜',
+        image:
+          'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=900&q=80',
+        description: '식혜는 오른쪽에 배치하는 경우가 많으며 후식류와의 간격을 확보합니다.',
+      },
     ],
   },
   {
     label: '5열: 과실',
     items: [
-      { name: '대추' },
-      { name: '밤' },
-      { name: '배', hint: '홍동백서에 맞춰 색 배열을 정리합니다.' },
-      { name: '곶감' },
-      { name: '사과' },
+      {
+        id: 'jujube',
+        name: '대추',
+        image:
+          'https://images.unsplash.com/photo-1607305387299-a3d9611cd469?auto=format&fit=crop&w=900&q=80',
+        description: '말린 대추는 전통적으로 자손 번영을 상징하는 과실로 자주 사용됩니다.',
+      },
+      {
+        id: 'chestnut',
+        name: '밤',
+        image:
+          'https://images.unsplash.com/photo-1603048719539-9ecb4a70e3f2?auto=format&fit=crop&w=900&q=80',
+        description: '밤은 껍질 상태를 깔끔하게 맞춰 좌우 균형을 고려해 배치합니다.',
+      },
+      {
+        id: 'pear',
+        name: '배',
+        image:
+          'https://images.unsplash.com/photo-1574226516831-e1dff420e37f?auto=format&fit=crop&w=900&q=80',
+        description: '배는 흰 계열 과실로 분류되어 서쪽에 두는 홍동백서 원칙을 따릅니다.',
+      },
+      {
+        id: 'persimmon',
+        name: '곶감',
+        image:
+          'https://images.unsplash.com/photo-1619566636858-adf3ef46400b?auto=format&fit=crop&w=900&q=80',
+        description: '곶감은 건과류와 함께 묶어 정리하면 5열 구성이 단정해집니다.',
+      },
+      {
+        id: 'apple',
+        name: '사과',
+        image:
+          'https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?auto=format&fit=crop&w=900&q=80',
+        description: '사과는 붉은 과실로 동쪽에 배치합니다. 크기가 비슷한 과실끼리 맞추면 보기 좋습니다.',
+      },
     ],
   },
 ]
 
+const allFoods = tableRows.flatMap((row) =>
+  row.items.map((item) => ({
+    ...item,
+    rowLabel: row.label,
+  })),
+)
+
 function App() {
   const [regionId, setRegionId] = useState(regions[0].id)
+  const [selectedFoodId, setSelectedFoodId] = useState(allFoods[0].id)
 
   const selectedRegion = useMemo(
     () => regions.find((region) => region.id === regionId),
     [regionId],
+  )
+
+  const selectedFood = useMemo(
+    () => allFoods.find((food) => food.id === selectedFoodId) ?? allFoods[0],
+    [selectedFoodId],
   )
 
   return (
@@ -130,19 +237,11 @@ function App() {
       </header>
 
       <main className="layout">
-        <aside className="steps" aria-label="차례상 단계">
-          {[1, 2, 3, 4, 5].map((step) => (
-            <div key={step} className={`step ${step === 1 ? 'active' : ''}`}>
-              {step}
-            </div>
-          ))}
-        </aside>
-
         <section className="table-area" aria-label="차례상 배치도">
           <div className="table-header">
             <div>
               <h2>차례상 배치도</h2>
-              <p>항목에 마우스를 올리면 배치 원칙을 확인할 수 있습니다.</p>
+              <p>음식을 클릭하면 설명과 사진이 아래에 표시됩니다.</p>
             </div>
             <span className="axis">서(좌) - 동(우)</span>
           </div>
@@ -153,15 +252,29 @@ function App() {
                 <p className="row-label">{row.label}</p>
                 <div className="foods" data-count={row.items.length}>
                   {row.items.map((item) => (
-                    <div key={item.name} className={`food ${item.center ? 'center' : ''}`}>
+                    <button
+                      key={item.id}
+                      type="button"
+                      className={`food ${selectedFoodId === item.id ? 'active' : ''}`}
+                      onClick={() => setSelectedFoodId(item.id)}
+                    >
+                      <img src={item.image} alt={item.name} loading="lazy" />
                       <span>{item.name}</span>
-                      {item.hint ? <small className="tooltip">{item.hint}</small> : null}
-                    </div>
+                    </button>
                   ))}
                 </div>
               </article>
             ))}
           </div>
+
+          <article className="food-detail" aria-live="polite">
+            <img src={selectedFood.image} alt={selectedFood.name} loading="lazy" />
+            <div>
+              <p className="detail-row">{selectedFood.rowLabel}</p>
+              <h3>{selectedFood.name}</h3>
+              <p>{selectedFood.description}</p>
+            </div>
+          </article>
         </section>
 
         <aside className="sidebar">
