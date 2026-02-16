@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520" role="img" aria-label="Chungcheong Charye Table">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8edd9"/>
+      <stop offset="100%" stop-color="#efdebe"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="520" fill="url(#bg)"/>
+  <rect x="70" y="80" width="760" height="360" rx="24" fill="#fffaf2" stroke="#dcc9a7" stroke-width="4"/>
+  <rect x="160" y="150" width="138" height="95" rx="20" fill="#d1a170"/>
+  <rect x="330" y="150" width="138" height="95" rx="20" fill="#c08e5d"/>
+  <rect x="500" y="150" width="138" height="95" rx="20" fill="#ac7d53"/>
+  <circle cx="220" cy="315" r="48" fill="#e2d38b"/>
+  <circle cx="390" cy="315" r="48" fill="#d2c07a"/>
+  <circle cx="560" cy="315" r="48" fill="#c3ac6d"/>
+  <text x="86" y="470" fill="#5f3f2a" font-size="34" font-family="Arial, sans-serif" font-weight="700">CHUNGCHEONG</text>
+</svg>

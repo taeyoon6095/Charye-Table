@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520" role="img" aria-label="Jeju Charye Table">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e5f0de"/>
+      <stop offset="100%" stop-color="#cde0bf"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="520" fill="url(#bg)"/>
+  <rect x="70" y="80" width="760" height="360" rx="24" fill="#f8fff4" stroke="#a7c28e" stroke-width="4"/>
+  <rect x="150" y="155" width="150" height="92" rx="22" fill="#8db67f"/>
+  <rect x="335" y="155" width="150" height="92" rx="22" fill="#709f67"/>
+  <rect x="520" y="155" width="150" height="92" rx="22" fill="#588154"/>
+  <ellipse cx="220" cy="318" rx="52" ry="34" fill="#7ea7a1"/>
+  <ellipse cx="410" cy="318" rx="52" ry="34" fill="#5f8d84"/>
+  <ellipse cx="600" cy="318" rx="52" ry="34" fill="#467469"/>
+  <text x="86" y="470" fill="#32523a" font-size="34" font-family="Arial, sans-serif" font-weight="700">JEJU</text>
+</svg>
